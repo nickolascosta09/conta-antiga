@@ -1,0 +1,214 @@
+[gd_scene load_steps=13 format=3 uid="uid://id1jwbinoi1o"]
+
+[ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_m7h1x"]
+[ext_resource type="Texture2D" uid="uid://qllehf8vgmv8" path="res://addons/Tiny Swords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_qrsl7"]
+[ext_resource type="Texture2D" uid="uid://b4sgt8n6b66u5" path="res://addons/Tiny Swords/UI/Banners/Banner_Vertical.png" id="2_jrx08"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxltm"]
+texture = ExtResource("1_qrsl7")
+texture_margin_left = 64.0
+texture_margin_right = 64.0
+axis_stretch_horizontal = 2
+region_rect = Rect2(0, 0, 192, 64.1893)
+
+[sub_resource type="SystemFont" id="SystemFont_7yrwv"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_j0rpq"]
+font = SubResource("SystemFont_7yrwv")
+font_size = 38
+font_color = Color(0.403922, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onf11"]
+texture = ExtResource("2_jrx08")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+
+[sub_resource type="SystemFont" id="SystemFont_2igfp"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_b8xaq"]
+font = SubResource("SystemFont_2igfp")
+font_size = 32
+font_color = Color(0, 0, 0, 0.831373)
+
+[sub_resource type="Animation" id="Animation_ntmfs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(355, 61)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottomPanel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(297, 197)]
+}
+
+[sub_resource type="Animation" id="Animation_vh4ct"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.392292, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.694118)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(352, -235), Vector2(355, 61)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottomPanel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(322, 800), Vector2(297, 197)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ea8nw"]
+_data = {
+"RESET": SubResource("Animation_ntmfs"),
+"default": SubResource("Animation_vh4ct")
+}
+
+[node name="GameOverUI" type="CanvasLayer"]
+script = ExtResource("1_m7h1x")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="TopPanel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -221.0
+offset_top = 61.0
+offset_right = 225.0
+offset_bottom = 182.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hxltm")
+
+[node name="Label" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = -41.5
+offset_right = 109.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_j0rpq")
+
+[node name="BottomPanel" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -279.0
+offset_top = -451.0
+offset_right = 288.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_onf11")
+
+[node name="GridContainer" type="GridContainer" parent="BottomPanel"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 68.0
+offset_right = 445.0
+offset_bottom = 327.0
+theme_override_constants/v_separation = 25
+
+[node name="Label" type="Label" parent="BottomPanel/GridContainer"]
+layout_mode = 2
+text = "Tempo:"
+label_settings = SubResource("LabelSettings_b8xaq")
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="BottomPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "15:00"
+label_settings = SubResource("LabelSettings_b8xaq")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="BottomPanel/GridContainer"]
+layout_mode = 2
+text = "Inimigos derrotados:"
+label_settings = SubResource("LabelSettings_b8xaq")
+horizontal_alignment = 1
+
+[node name="MonstersLabel" type="Label" parent="BottomPanel/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "35"
+label_settings = SubResource("LabelSettings_b8xaq")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ea8nw")
+}
+autoplay = "default"
