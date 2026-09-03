@@ -1,0 +1,140 @@
+body{
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: auto;
+    height: auto;
+}
+.cabecalho img{
+    left: 639px;
+    top: 27px;
+    width: 100px;
+    height: 100px;
+    padding-left: 0px;
+}
+.imgsys{
+    margin-top: -5px;
+}
+#linha{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    box-sizing: border-box;
+}
+.menuLateral{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.img-menu{
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 75px;
+}
+#btnClose{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: lightgray;
+    margin-left: 5px;
+}
+.texto-menu{
+    text-align: center;
+    margin-bottom: -17px;
+    margin-top: 5px;
+}
+.lista-nav{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+.tela-body{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+.tela-body.empurrar{
+    margin: 250px;
+}
+#mostrar-menu{
+    margin-left: 30px;
+}
+#btn-menu{
+    height: 40px;
+    width: 40px;
+    border-radius: 40%;
+    border: none;
+    background-color:lightgray;
+    cursor: pointer;
+}
+.btn-logo-menu{
+    height: 20px;
+    width: 20px;
+    opacity: 50%;
+}
+.item-lista{
+    border-top: 1px solid lightgray;
+    border-width: 100%;
+    font-size: 17px;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -70px;
+}
+.logout{
+    margin-top: 425px;
+}
+#btn-logout{
+    margin-left: 70px;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: #2c2c2c;
+    cursor: pointer;
+}
+.tela-container{
+    margin: 200px 75px 300px 420px;
+    display: flex;
+}
+.tela-container img{
+    height: 32px;
+    width: 32px;
+    opacity: 50%;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.tela-container a{
+    color: black;
+    opacity: 50%;
+    text-decoration: none;
+    font-size: large;
+    padding-left: 12px;
+}
+#cadastro-container{
+    background-color: #f9f485;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.20000000298023224);
+}
+#consulta-container{
+    margin-left: 50px;
+    background-color: #db62f3;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.20000000298023224);
+}

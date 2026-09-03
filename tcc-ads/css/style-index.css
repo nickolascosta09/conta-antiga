@@ -1,0 +1,89 @@
+body{
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: auto;
+    height: auto;
+}
+#formLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+}
+#logo-index{
+    left: 639px;
+    top: 27px;
+    width: 144px;
+    height: 162px;
+    padding-left: 50px;
+}
+#form-index{
+    display: flex;
+    position: relative;
+    height: 414px;
+    width: 428px;
+    border-radius: 8px;
+    padding: 100px 20px 0px 20px;
+    flex-direction: column;
+    gap: 24px;
+}
+.input-field{
+    height: 300px;
+    width: 250px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-style: hidden;
+    outline: none;
+}
+#form-label{
+    border: 1.5px solid lightgray;
+    height: 300px;
+    padding-top: 10px;
+}
+.label{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.input{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+#login{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 220px;
+    height: 22px;
+}
+#senha{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 220px;
+    height: 22px;
+}
+#btnLogin{
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#rodape{
+    clear: both;
+    margin-top: 250px;
+}
+.copyright{
+    text-align: center;
+}
+#btn-github{
+    border: none;
+    background-color: white;
+}
+#btn-linkedin{
+    border: none;
+    background-color: white;
+}
